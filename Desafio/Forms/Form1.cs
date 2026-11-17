@@ -105,10 +105,8 @@ namespace Desafio
             if (string.IsNullOrWhiteSpace(busca))
             {
                 MessageBox.Show(
-                    "Preencha o campo corretamente para  buscar!",
-                    "Atenção",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                    "Preencha o campo corretamente para buscar!", "Atenção",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 return;
             }
@@ -118,10 +116,8 @@ namespace Desafio
                 if (busca.Length != 11 || !busca.All(char.IsDigit))
                 {
                     MessageBox.Show(
-                        "Digite um CPF com exatamente 11 dígitos!",
-                        "Atenção",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
+                        "Digite um CPF com exatamente 11 dígitos!", "Atenção",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     return;
                 }
@@ -141,10 +137,8 @@ namespace Desafio
             var pessoa = (Pessoa)DGVPessoas.CurrentRow.DataBoundItem!;
 
             var confirmacao = MessageBox.Show(
-                $"Deseja excluir {pessoa.Nome}?",
-                "Confirmar exclusão",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+                $"Deseja excluir {pessoa.Nome}?", "Confirmar exclusão",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacao != DialogResult.Yes)
                 return;
@@ -227,10 +221,8 @@ namespace Desafio
                 return;
 
             var resposta = MessageBox.Show(
-                "Deseja realmente sair do programa?",
-                "Sair",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+                "Deseja realmente sair do programa?", "Sair",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resposta == DialogResult.Yes)
             {

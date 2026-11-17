@@ -6,7 +6,7 @@
 
         public int Id { get; set; }
 
-        public string? Error { get; set; }
+        public string Error { get; set; } = string.Empty;
 
         public List<Pessoa> Pessoas { get; set; } = new();
     }
